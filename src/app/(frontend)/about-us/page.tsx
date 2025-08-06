@@ -1,8 +1,7 @@
 import React from 'react'
-import Hero from '@/components/landingpage/Hero'
 
 export default function page() {
   return (
-    <div><Hero/></div>
+    <div><h4>This is the about page</h4></div>
   )
 }
