@@ -1,31 +1,30 @@
-import React from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Facebook, 
-  Instagram, 
-  Linkedin, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Instagram,
+  Linkedin,
   Twitter,
   ArrowRight,
   Award,
   Users,
   Building,
-  Calendar
-} from 'lucide-react';
+  Calendar,
+} from 'lucide-react'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  
+  const currentYear = new Date().getFullYear()
+
   const services = [
     'Residential Design',
-    'Commercial Architecture', 
+    'Commercial Architecture',
     'Interior Design',
     'Urban Planning',
     'Sustainable Design',
-    '3D Visualization'
-  ];
+    '3D Visualization',
+  ]
 
   const quickLinks = [
     'About Us',
@@ -33,18 +32,18 @@ export default function Footer() {
     'Design Process',
     'Awards & Recognition',
     'Careers',
-    'News & Insights'
-  ];
+    'News & Insights',
+  ]
 
   const socialLinks = [
     { icon: Facebook, label: 'Facebook', href: '#' },
     { icon: Instagram, label: 'Instagram', href: '#' },
     { icon: Linkedin, label: 'LinkedIn', href: '#' },
-    { icon: Twitter, label: 'Twitter', href: '#' }
-  ];
+    { icon: Twitter, label: 'Twitter', href: '#' },
+  ]
 
   return (
-    <footer className="bg-slate-900 text-white relative overflow-hidden">
+    <footer className="bg-black text-white relative overflow-hidden">
       {/* Geometric Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-32 h-32 border border-amber-400 transform rotate-45"></div>
@@ -55,19 +54,20 @@ export default function Footer() {
 
       {/* Main Footer Content */}
       <div className="relative mx-auto px-12">
-        
         {/* Newsletter Section */}
         <div className="py-16 border-b border-slate-800">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-light mb-4">
-              Stay Updated with <span className="text-amber-400 font-semibold">Design Insights</span>
+              Stay Updated with{' '}
+              <span className="text-amber-400 font-semibold">Design Insights</span>
             </h2>
             <p className="text-slate-400 mb-8 text-lg">
-              Subscribe to our newsletter for the latest architectural trends, project showcases, and industry insights.
+              Subscribe to our newsletter for the latest architectural trends, project showcases,
+              and industry insights.
             </p>
             <div className="flex max-w-md mx-auto">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Enter your email address"
                 className="flex-1 px-6 py-4 bg-slate-800 border border-slate-700 focus:border-amber-400 focus:outline-none text-white placeholder-slate-400 rounded-l-lg"
               />
@@ -81,7 +81,6 @@ export default function Footer() {
 
         {/* Main Footer Grid */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          
           {/* Company Info */}
           <div className="lg:col-span-1">
             {/* Logo */}
@@ -99,9 +98,10 @@ export default function Footer() {
                 </h3>
               </div>
             </div>
-            
+
             <p className="text-slate-400 mb-6 leading-relaxed">
-              Transforming visions into architectural masterpieces. We design spaces that inspire, innovate, and endure.
+              Transforming visions into architectural masterpieces. We design spaces that inspire,
+              innovate, and endure.
             </p>
 
             {/* Stats */}
@@ -139,8 +139,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-slate-400 hover:text-amber-400 transition-colors duration-300 flex items-center group"
                   >
                     <div className="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3 opacity-60 group-hover:opacity-100"></div>
@@ -159,8 +159,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-slate-400 hover:text-amber-400 transition-colors duration-300 flex items-center group"
                   >
                     <div className="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3 opacity-60 group-hover:opacity-100"></div>
@@ -177,7 +177,6 @@ export default function Footer() {
               Get In Touch
             </h4>
             <div className="space-y-4">
-              
               {/* Address */}
               <div className="flex items-start space-x-3">
                 <div className="flex items-center justify-center w-8 h-8 bg-slate-800 rounded-lg mt-0.5">
@@ -185,8 +184,10 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    123 Architecture Avenue<br />
-                    Design City, DC 12345<br />
+                    123 Architecture Avenue
+                    <br />
+                    Design City, DC 12345
+                    <br />
                     United States
                   </p>
                 </div>
@@ -198,7 +199,10 @@ export default function Footer() {
                   <Phone size={16} className="text-amber-400" />
                 </div>
                 <div>
-                  <a href="tel:+15551234567" className="text-slate-400 hover:text-amber-400 transition-colors">
+                  <a
+                    href="tel:+15551234567"
+                    className="text-slate-400 hover:text-amber-400 transition-colors"
+                  >
                     +1 (555) 123-4567
                   </a>
                 </div>
@@ -210,7 +214,10 @@ export default function Footer() {
                   <Mail size={16} className="text-amber-400" />
                 </div>
                 <div>
-                  <a href="mailto:hello@archi.studio" className="text-slate-400 hover:text-amber-400 transition-colors">
+                  <a
+                    href="mailto:hello@archi.studio"
+                    className="text-slate-400 hover:text-amber-400 transition-colors"
+                  >
                     hello@archi.studio
                   </a>
                 </div>
@@ -223,8 +230,10 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Monday - Friday: 9:00 - 18:00<br />
-                    Saturday: 10:00 - 16:00<br />
+                    Monday - Friday: 9:00 - 18:00
+                    <br />
+                    Saturday: 10:00 - 16:00
+                    <br />
                     Sunday: Closed
                   </p>
                 </div>
@@ -247,7 +256,9 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Award size={20} className="text-amber-400" />
-              <span className="text-slate-400 text-sm">Certified by AIA • LEED Accredited • Award-winning Design</span>
+              <span className="text-slate-400 text-sm">
+                Certified by AIA • LEED Accredited • Award-winning Design
+              </span>
             </div>
             <div className="flex items-center space-x-6 text-slate-400 text-sm">
               <div className="flex items-center space-x-2">
@@ -268,13 +279,21 @@ export default function Footer() {
             <p>&copy; {currentYear} ArchiStudio. All rights reserved.</p>
           </div>
           <div className="flex items-center space-x-6">
-            <a href="#" className="hover:text-amber-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-amber-400 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-amber-400 transition-colors">Cookie Policy</a>
-            <a href="#" className="hover:text-amber-400 transition-colors">Accessibility</a>
+            <a href="#" className="hover:text-amber-400 transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-amber-400 transition-colors">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-amber-400 transition-colors">
+              Cookie Policy
+            </a>
+            <a href="#" className="hover:text-amber-400 transition-colors">
+              Accessibility
+            </a>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }
