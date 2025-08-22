@@ -12,7 +12,6 @@ export default function page() {
       <Hero />
       <AboutSection />
       <Projects />
-
       <ServicesSection />
       <CTA />
     </div>

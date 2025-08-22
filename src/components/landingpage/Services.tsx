@@ -125,15 +125,6 @@ export default function ServicesSection() {
       <div className="absolute top-1/3 left-8 w-px h-48 bg-gradient-to-b from-transparent via-amber-400/20 to-transparent"></div>
 
       {/* Floating Image */}
-      <div className="absolute top-32 right-8 opacity-20 hover:opacity-30 transition-opacity duration-500">
-        <Image
-          height={400}
-          width={400}
-          alt="design element"
-          src="/hover.png"
-          className="rotate-12 animate-[bounce_4s_ease-in-out_infinite]"
-        />
-      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
