@@ -12,6 +12,9 @@ const nextConfig = {
 
     return webpackConfig
   },
+  images: {
+    domains: ['images.unsplash.com', 'cdn.sanity.io'],
+  },
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })
