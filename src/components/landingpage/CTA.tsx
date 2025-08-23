@@ -6,7 +6,7 @@ import { BsArrowUpRight } from 'react-icons/bs'
 
 export default function CTA() {
   return (
-    <section className=" bg-[url(/2.jpg)] bg-cover bg-center py-12 md:py-24 px-4 relative overflow-hidden">
+    <section className=" bg-[url(/3.jpg)] bg-cover bg-center py-12 md:py-24 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-black to-black/70 z-0"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center ">
