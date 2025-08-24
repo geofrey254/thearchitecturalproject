@@ -110,7 +110,7 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
   return (
     <div className="relative" style={{ animationDelay: `${index * 200}ms` }}>
       {/* Image container */}
-      <div className="relative w-full h-[40vh] md:h-[90vh]">
+      <div className="relative w-full h-[40vh] md:h-[80vh]">
         <Image
           fill
           src={project.image}
@@ -129,8 +129,8 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
       </div>
 
       {/* Content */}
-      <div className="p-6">
-        <h3 className="text-2xl font-semibold text-white/60 mb-3 group-hover:text-amber-600 transition-colors duration-300">
+      <div className="my-4">
+        <h3 className="text-2xl font-semibold text-white/60 md:mb-3 group-hover:text-amber-600 transition-colors duration-300">
           {project.title}
         </h3>
 

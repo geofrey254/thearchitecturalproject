@@ -6,8 +6,8 @@ import { BsArrowUpRight } from 'react-icons/bs'
 
 export default function CTA() {
   return (
-    <section className=" bg-[url(/3.jpg)] bg-cover bg-center py-12 md:py-24 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-black to-black/70 z-0"></div>
+    <section className=" bg-[url(/4.jpg)] bg-fixed bg-cover bg-center py-12 md:py-24 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b bg-scroll md:bg-gradient-to-br from-black to-black/70 z-0"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center ">
           <div className="col-span-12 lg:col-span-6 text-center lg:text-left">
@@ -56,7 +56,7 @@ export default function CTA() {
 
             <div>
               <Link
-                className="border border-white/65 px-4 py-2 rounded-full text-white flex w-[38%] md:w-[30%] items-center justify-between mx-auto lg:mx-0 hover:bg-amber-400 hover:shadow-lg transition-all duration-300"
+                className="border border-white/65 px-4 py-2 rounded-full text-white flex w-[46%] md:w-[34%] items-center justify-between mx-auto lg:mx-0 hover:bg-amber-400 hover:shadow-lg transition-all duration-300"
                 href="#"
               >
                 Contact Us{' '}
@@ -78,8 +78,8 @@ export default function CTA() {
           </div>
         </div>
       </div>
-      <div className="absolute -bottom-8 md:-bottom-12 right-20 md:right-8 z-40 opacity-30 select-none pointer-events-none">
-        <h3 className="text-white text-[8rem] md:text-[12rem] font-extrabold">walter</h3>
+      <div className="absolute -bottom-8 md:-bottom-12 right-2 md:right-8 z-40 opacity-30 select-none pointer-events-none">
+        <h3 className="text-white text-[6rem] md:text-[12rem] font-extrabold">walter</h3>
       </div>
     </section>
   )
