@@ -13,7 +13,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body className="bg-black p-0 m-0">
         <main>
           <Navbar />
           {children}

@@ -104,7 +104,7 @@ export default function ServicesSection() {
   const [selectedService, setSelectedService] = useState(0)
 
   return (
-    <section className="bg-white py-24 px-4 relative overflow-hidden">
+    <section className="bg-white pt-24 px-4 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-3">
         <div

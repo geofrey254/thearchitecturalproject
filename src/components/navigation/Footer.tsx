@@ -84,18 +84,24 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             {/* Logo */}
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="relative w-12 h-12">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-amber-600 transform rotate-45 rounded-sm"></div>
-                <div className="absolute inset-1 bg-slate-900 transform rotate-45 rounded-sm"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-bold text-amber-400 text-lg">A</span>
+            <div className="flex items-center mb-4">
+              <div className="group cursor-pointer">
+                <div className="flex items-center space-x-3">
+                  <div
+                    className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 flex items-center justify-center transition-all duration-300 border-amber-400/60 animate-pulse group-hover:scale-105 group-hover:border-amber-400/90 group-hover:shadow-lg group-hover:shadow-amber-400/30
+                    "
+                  >
+                    <div className="w-2 h-2 rounded-full transition-all duration-300 bg-amber-400" />
+                  </div>
+                  <div>
+                    <h1
+                      className="text-lg lg:text-xl font-light tracking-[0.2em] transition-colors duration-300 text-white
+                      "
+                    >
+                      WALTER
+                    </h1>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-light tracking-wider">
-                  ARCHI<span className="font-bold text-amber-400">STUDIO</span>
-                </h3>
               </div>
             </div>
 

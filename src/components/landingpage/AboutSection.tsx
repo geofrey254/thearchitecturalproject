@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AboutSection() {
   return (
-    <section className="bg-gray-50 py-24 px-4 relative overflow-hidden">
+    <section className="bg-gray-50 py-24 px-8 relative overflow-hidden">
       {/* Architectural Grid Pattern Background */}
       <div className="absolute inset-0 opacity-5">
         <div

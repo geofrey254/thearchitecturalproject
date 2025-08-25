@@ -4,16 +4,19 @@ import AboutSection from '@/components/landingpage/AboutSection'
 import Projects from '@/components/landingpage/Projects'
 import ServicesSection from '@/components/landingpage/Services'
 import CTA from '@/components/landingpage/CTA'
-import Image from 'next/image'
+import { Video } from '@/components/landingpage/Video'
+import Floating from '@/components/landingpage/Floating'
 
 export default function page() {
   return (
-    <div>
+    <>
       <Hero />
       <AboutSection />
       <Projects />
       <ServicesSection />
+      <Floating />
       <CTA />
-    </div>
+      <Video />
+    </>
   )
 }

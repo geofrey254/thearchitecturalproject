@@ -33,7 +33,7 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <section className="bg-black py-24 px-4 relative overflow-hidden">
+    <section className="bg-black py-24 px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left: Badge */}
@@ -120,7 +120,7 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
 
         {/* Category badge */}
         <div className="absolute top-4 left-4">
-          <div className="backdrop-blur-sm px-3 py-1 rounded-full border border-gray-200/90">
+          <div className="bg-black/40 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/90 flex justify-center items-center">
             <span className="text-xs font-medium text-white tracking-wide uppercase">
               {project.category}
             </span>
