@@ -1,7 +1,11 @@
-import React from 'react'
+import SectionHero from '@/components/custom/SectionHero'
+import Philosophy from '@/components/aboutPage/Philosophy'
 
 export default function page() {
   return (
-    <div><h4>This is the about page</h4></div>
+    <>
+      <SectionHero title="About Us" />
+      <Philosophy />
+    </>
   )
 }

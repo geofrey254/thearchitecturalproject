@@ -1,5 +1,6 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import { motion } from 'framer-motion'
 
 const PROJECTS = [
   {
@@ -31,14 +32,134 @@ const PROJECTS = [
   },
 ]
 
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+}
+
+const badgeVariants = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 120,
+      damping: 10,
+      duration: 0.8,
+    },
+  },
+}
+
+const titleVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 100,
+      damping: 12,
+      duration: 0.8,
+    },
+  },
+}
+
+const descriptionVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 80,
+      damping: 12,
+      duration: 0.8,
+      delay: 0.3,
+    },
+  },
+}
+
+const projectsGridVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      delayChildren: 0.5,
+    },
+  },
+}
+
+const projectCardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+    scale: 0.9,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 60,
+      damping: 15,
+      duration: 0.8,
+    },
+  },
+}
+
+const bottomElementVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 80,
+      damping: 15,
+      duration: 0.6,
+      delay: 1.2,
+    },
+  },
+}
+
 export default function Projects() {
   return (
     <section className="bg-black py-24 px-8 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto relative z-10">
+      <motion.div
+        className="max-w-7xl mx-auto relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left: Badge */}
           <div className="lg:col-span-3 flex justify-center lg:justify-start lg:sticky lg:top-8">
-            <div className="group relative">
+            <motion.div className="group relative" variants={badgeVariants}>
               {/* Glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
 
@@ -57,42 +178,57 @@ export default function Projects() {
                 {/* Architectural detail line */}
                 <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent"></div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right: Title and Description */}
           <div className="lg:col-span-9">
             <div className="mb-20">
-              <h2 className="text-5xl lg:text-7xl font-light text-white mb-8 leading-[0.9] tracking-tight">
+              <motion.h2
+                className="text-5xl lg:text-7xl font-light text-white mb-8 leading-[0.9] tracking-tight"
+                variants={titleVariants}
+              >
                 Creative
                 <span className="block text-amber-500 font-bold mt-2">Projects That Define</span>
                 <span className="block text-white font-medium">Our Style</span>
-              </h2>
+              </motion.h2>
 
-              <div className="relative max-w-3xl">
+              <motion.div className="relative max-w-3xl" variants={descriptionVariants}>
                 <div className="absolute md:-left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-400 via-amber-500 to-transparent opacity-30"></div>
                 <p className="text-lg text-gray-50 leading-relaxed font-light pl-8">
                   Explore our portfolio of distinctive architectural projects that showcase our
                   commitment to innovative design, sustainable construction, and spaces that inspire
                   communities across Kenya.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         {/* Projects Grid */}
-        <div className="mt-4 px-2 items-start">
+        <motion.div
+          className="mt-4 px-2 items-start"
+          variants={projectsGridVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {/* Left Projects */}
           <div className=" grid grid-cols-1 lg:grid-cols-3 space-x-8">
             {PROJECTS.slice(0, 3).map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Bottom architectural element */}
-        <div className="mt-20 flex justify-center">
+        <motion.div
+          className="mt-20 flex justify-center"
+          variants={bottomElementVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+        >
           <div className="flex items-center space-x-4 opacity-30">
             <div className="w-16 h-px bg-gradient-to-r from-transparent to-gray-400"></div>
             <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
@@ -100,17 +236,33 @@ export default function Projects() {
             <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
             <div className="w-16 h-px bg-gradient-to-l from-transparent to-gray-400"></div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }
 
-function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index: number }) {
+function ProjectCard({ project }: { project: (typeof PROJECTS)[0]; index: number }) {
   return (
-    <div className="relative" style={{ animationDelay: `${index * 200}ms` }}>
+    <motion.div
+      className="relative"
+      variants={projectCardVariants}
+      whileHover={{
+        y: -10,
+        scale: 1.02,
+        transition: {
+          type: 'spring',
+          stiffness: 300,
+          damping: 20,
+        },
+      }}
+    >
       {/* Image container */}
-      <div className="relative w-full h-[40vh] md:h-[80vh]">
+      <motion.div
+        className="relative w-full h-[40vh] md:h-[80vh]"
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+      >
         <Image
           fill
           src={project.image}
@@ -119,17 +271,29 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
         />
 
         {/* Category badge */}
-        <div className="absolute top-4 left-4">
+        <motion.div
+          className="absolute top-4 left-4"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           <div className="bg-black/40 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/90 flex justify-center items-center">
             <span className="text-xs font-medium text-white tracking-wide uppercase">
               {project.category}
             </span>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Content */}
-      <div className="my-4">
+      <motion.div
+        className="my-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+      >
         <h3 className="text-2xl font-semibold text-white/60 md:mb-3 group-hover:text-amber-600 transition-colors duration-300">
           {project.title}
         </h3>
@@ -138,7 +302,7 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
           <h4 className="font-medium -mb-2">{project.location}</h4>
           <h4 className="font-medium">{project.year}</h4>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }

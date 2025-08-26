@@ -58,7 +58,7 @@ export default function ModernInteriorHero() {
   ]
 
   const changeSlide = useCallback(
-    (newIndex: any) => {
+    (newIndex: number) => {
       if (isAnimating) return
       setIsAnimating(true)
       setCurrentSlide(newIndex)
@@ -88,7 +88,7 @@ export default function ModernInteriorHero() {
   useEffect(() => {
     setIsLoaded(true)
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
 
@@ -96,7 +96,7 @@ export default function ModernInteriorHero() {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
-  const goToSlide = (index: any) => changeSlide(index)
+  const goToSlide = (index: number) => changeSlide(index)
   const goToPrevious = () => changeSlide((currentSlide - 1 + slides.length) % slides.length)
   const goToNext = () => changeSlide((currentSlide + 1) % slides.length)
   const toggleAutoPlay = () => setIsAutoPlaying(!isAutoPlaying)

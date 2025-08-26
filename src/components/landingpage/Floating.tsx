@@ -15,12 +15,14 @@ export default function Floating() {
             Architecture
           </h3>
         </div>
-        <Image
-          src="/hover2.png"
-          alt="Floating Architectural Design"
-          fill
-          className=" mt-11 md:mt-28"
-        />
+        <div>
+          <Image
+            src="/hover2.png"
+            alt="Floating Architectural Design"
+            fill
+            className=" mt-11 md:mt-28"
+          />
+        </div>
       </div>
     </section>
   )
