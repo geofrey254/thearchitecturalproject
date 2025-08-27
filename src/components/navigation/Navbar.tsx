@@ -19,7 +19,7 @@ export default function MinimalistInteriorNavbar() {
     }
   }, [])
 
-  const toggleMenu = (e) => {
+  const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
@@ -95,7 +95,7 @@ export default function MinimalistInteriorNavbar() {
                 </a>
 
                 <a
-                  href="/about"
+                  href="/about-us"
                   className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
                     isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
                   }`}
@@ -163,7 +163,7 @@ export default function MinimalistInteriorNavbar() {
                 </Link>
 
                 <a
-                  href="/about"
+                  href="/about-us"
                   className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
