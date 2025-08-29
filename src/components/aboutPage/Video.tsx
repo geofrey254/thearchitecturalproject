@@ -10,9 +10,9 @@ export function Video() {
         playsInline
         muted
         loop
-        className="w-full h-[70vh] md:h-[60vh] object-cover"
+        className="w-full h-[40vh] md:h-[60vh] object-cover"
       >
-        <source src="/house.mp4" type="video/mp4" />
+        <source src="/vid2.mp4" type="video/mp4" />
 
         {/* Fallback content for browsers that don't support video */}
         <div className="relative w-full h-64 bg-gradient-to-br from-amber-900 to-black flex items-center justify-center">

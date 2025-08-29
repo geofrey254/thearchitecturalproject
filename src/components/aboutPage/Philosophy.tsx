@@ -26,7 +26,7 @@ export default function HeroSection() {
       opacity: 1,
       x: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 100,
         damping: 12,
         duration: 0.8,
@@ -45,30 +45,10 @@ export default function HeroSection() {
       scale: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 80,
         damping: 15,
         duration: 1,
-      },
-    },
-  }
-
-  const secondImageVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.9,
-      x: 30,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      x: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 70,
-        damping: 18,
-        duration: 1.2,
-        delay: 0.3,
       },
     },
   }
@@ -110,7 +90,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative bg-white py-16 md:py-10 px-4 md:px-12 overflow-hidden">
+    <section className="relative bg-white py-10 px-4 md:px-12 overflow-hidden">
       {/* Enhanced Background with Architectural Grid */}
       <div className="absolute inset-0">
         {/* Main gradient overlay */}
@@ -234,14 +214,14 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-8 gap-12 lg:gap-2 items-center">
           {/* Left: Content */}
           <div className="lg:col-span-5 space-y-6 sm:space-y-8">
-            <motion.div className="inline-block" variants={slideInVariants}>
+            <motion.div className="md:inline-block flex justify-center" variants={slideInVariants}>
               <span className="px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-amber-400/12 to-amber-400/8 text-amber-600 text-xs sm:text-sm font-semibold tracking-wider uppercase rounded-full border border-amber-400/20 backdrop-blur-sm shadow-sm hover:shadow-md hover:bg-amber-400/15 transition-all duration-300">
                 About Us
               </span>
             </motion.div>
 
             <motion.h1
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900/70 leading-[0.85] sm:leading-[0.9] tracking-[-0.02em] font-sans "
+              className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900/70 leading-[0.85] sm:leading-[0.9] tracking-[-0.02em] font-sans text-center lg:text-left"
               variants={slideInVariants}
             >
               We Shape{' '}
@@ -258,15 +238,9 @@ export default function HeroSection() {
             </motion.h1>
 
             {/* Number and small image section - enhanced responsiveness */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 lg:gap-12">
+            <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
               <motion.div className="relative" variants={slideInVariants}>
-                <h2
-                  className="text-6xl sm:text-7xl lg:text-[16rem] font-black text-gray-900/90 leading-none tracking-[-0.04em] select-none"
-                  style={{
-                    fontFamily: '"Inter", "SF Pro Display", -apple-system, system-ui, sans-serif',
-                    textShadow: '0 0 40px rgba(245, 158, 11, 0.1)',
-                  }}
-                >
+                <h2 className="text-[10rem] lg:text-[16rem] font-black text-gray-900/90 leading-none tracking-[-0.04em] select-none">
                   26
                 </h2>
                 <motion.div
@@ -276,7 +250,7 @@ export default function HeroSection() {
                   transition={{ delay: 1.8, duration: 0.6 }}
                 />
                 <motion.span
-                  className="absolute -bottom-6 sm:-bottom-8 left-0 text-xs sm:text-sm font-medium text-gray-500 tracking-wide uppercase"
+                  className="absolute -bottom-0 sm:-bottom-8 left-44 md:left-0 text-xs sm:text-sm font-medium text-gray-500 tracking-wide uppercase"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 2, duration: 0.5 }}
@@ -285,7 +259,7 @@ export default function HeroSection() {
                 </motion.span>
               </motion.div>
 
-              <motion.div className="relative group" variants={imageVariants}>
+              <motion.div className="relative group mt-8 md:mt-0" variants={imageVariants}>
                 <div className="relative overflow-hidden rounded-2xl lg:rounded-3xl">
                   {/* Image frame with architectural details */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent z-10 rounded-2xl lg:rounded-3xl" />
@@ -294,10 +268,10 @@ export default function HeroSection() {
 
                   <Image
                     src="/4.jpg"
-                    width={280}
-                    height={320}
+                    width={500}
+                    height={500}
                     alt="Modern architectural design detail"
-                    className="w-48 h-56 sm:w-56 sm:h-64 lg:w-80 lg:h-80 object-cover transition-all duration-700 group-hover:scale-105"
+                    className="w-80 h-96 sm:w-56 sm:h-64 lg:w-80 lg:h-80 object-cover transition-all duration-700 group-hover:scale-105"
                     priority
                   />
 
@@ -331,7 +305,7 @@ export default function HeroSection() {
                   width={450}
                   height={600}
                   alt="Modern architectural design showcase"
-                  className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-[60vh] sm:h-[65vh] lg:h-[70vh] object-cover transition-all duration-700 group-hover:scale-[1.02]"
+                  className="w-full max-w-full sm:max-w-md lg:max-w-lg xl:max-w-xl h-[40vh] sm:h-[65vh] lg:h-[70vh] object-cover transition-all duration-700 group-hover:scale-[1.02]"
                   priority
                 />
 
@@ -357,7 +331,7 @@ export default function HeroSection() {
             {/* Enhanced description with better typography */}
             <motion.div className="relative max-w-xl lg:max-w-2xl mt-8" variants={slideInVariants}>
               <div className="relative">
-                <p className="text-base sm:text-lg lg:text-lg text-gray-700 leading-relaxed font-light tracking-wide">
+                <p className="text-base sm:text-lg lg:text-lg text-gray-700 leading-relaxed font-light tracking-wide text-center lg:text-left">
                   We believe that every space has the power to inspire, and that great design brings
                   that inspiration to life. Our mission is to craft environments that stir
                   creativity, evoke emotion, and reflect the essence of those who inhabit them.
@@ -366,7 +340,10 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Premium CTA Design */}
-            <motion.div variants={slideInVariants} className="ml-0 mt-6">
+            <motion.div
+              variants={slideInVariants}
+              className="ml-0 mt-6 flex justify-center lg:justify-start"
+            >
               <Link
                 href="/contact"
                 className="group relative inline-flex items-center px-6 md:px-6 py-3 sm:py-2 text-gray-900 font-semibold rounded-full overflow-hidden transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:ring-offset-2 focus:ring-offset-white"

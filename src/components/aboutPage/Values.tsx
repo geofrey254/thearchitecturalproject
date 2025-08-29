@@ -86,7 +86,7 @@ export default function ValuesSection() {
   }
 
   return (
-    <section className="relative bg-black py-20 px-6 lg:py-32 overflow-hidden">
+    <section className="relative bg-white py-20 px-6 lg:py-32 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div

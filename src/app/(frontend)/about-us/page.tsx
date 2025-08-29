@@ -3,6 +3,7 @@ import Philosophy from '@/components/aboutPage/Philosophy'
 import AboutSection from '@/components/aboutPage/AboutSection'
 import ValuesSection from '@/components/aboutPage/Values'
 import { Video } from '@/components/aboutPage/Video'
+import LogoCarousel from '@/components/aboutPage/LogoCarousel'
 
 export default function page() {
   return (
@@ -11,7 +12,8 @@ export default function page() {
       <Philosophy />
       <Video />
       <AboutSection />
-      <ValuesSection />
+      <LogoCarousel />
+      {/* <ValuesSection /> */}
     </>
   )
 }
