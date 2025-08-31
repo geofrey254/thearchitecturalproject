@@ -28,7 +28,9 @@ export default function MinimalistInteriorNavbar() {
       {/* Main Navigation */}
       <nav
         className={`fixed w-full top-0 z-50 transition-all duration-700 ease-out ${
-          isScrolled ? 'bg-black/80 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'
+          isScrolled
+            ? 'bg-black/30 backdrop-blur-xl border-b border-white/5'
+            : 'bg-black/30 backdrop-blur-sm border-b border-white/5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -75,7 +77,7 @@ export default function MinimalistInteriorNavbar() {
                 </Link>
 
                 <a
-                  href="/about"
+                  href="/services"
                   className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
                     isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
                   }`}
@@ -85,7 +87,7 @@ export default function MinimalistInteriorNavbar() {
                 </a>
 
                 <a
-                  href="/about"
+                  href="/portfolio"
                   className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
                     isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
                   }`}
@@ -105,7 +107,7 @@ export default function MinimalistInteriorNavbar() {
                 </a>
 
                 <a
-                  href="/contact"
+                  href="/contact-us"
                   className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
                     isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
                   }`}
@@ -171,7 +173,23 @@ export default function MinimalistInteriorNavbar() {
                 </a>
 
                 <a
-                  href="/contact"
+                  href="/services"
+                  className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Services
+                </a>
+
+                <a
+                  href="/portfolio"
+                  className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Porfolio
+                </a>
+
+                <a
+                  href="/contact-us"
                   className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
                   onClick={() => setIsOpen(false)}
                 >

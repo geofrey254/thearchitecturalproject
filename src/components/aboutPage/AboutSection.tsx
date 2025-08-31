@@ -130,7 +130,7 @@ export default function AboutSection() {
             </motion.div>
 
             <motion.h2
-              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white/70 leading-[0.9] tracking-[-0.02em] font-sans text-center lg:text-left"
+              className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-black text-white/70 leading-[0.9] tracking-[-0.02em] font-sans text-center lg:text-left"
               variants={slideInFromRightVariants}
             >
               Designing{' '}
@@ -185,7 +185,7 @@ export default function AboutSection() {
             </motion.div>
           </div>
           {/* Content (Right - 5 columns) */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 md:mt-6">
             <motion.div className="space-y-6" variants={slideInFromRightVariants}>
               <p className="text-base sm:text-lg lg:text-lg text-white/50 leading-relaxed font-light tracking-wide text-center lg:text-left">
                 We believe that great architecture emerges from the intersection of functionality,

@@ -91,7 +91,7 @@ export default function SectionHero({ title }: SectionHeroProps) {
   return (
     <motion.section
       ref={containerRef}
-      className="relative py-24 flex items-center justify-center overflow-hidden"
+      className="relative py-20 md:py-20 flex items-center justify-center overflow-hidden"
       style={{ perspective: 1000 }}
     >
       {/* Animated Background */}
@@ -178,7 +178,7 @@ export default function SectionHero({ title }: SectionHeroProps) {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 px-8 text-center max-w-6xl mx-auto">
+      <div className="relative z-10 px-8 text-center max-w-6xl mx-auto mt-12 md:mt-24 mb-4 md:mb-8">
         {/* Animated Title */}
         <motion.div
           variants={containerVariants}
@@ -193,8 +193,8 @@ export default function SectionHero({ title }: SectionHeroProps) {
                 variants={wordVariants}
                 className={`inline-block mr-4 md:mr-6 ${
                   index === Math.floor(words.length / 2)
-                    ? 'text-amber-400 font-bold'
-                    : 'text-white font-bold'
+                    ? 'text-white font-bold'
+                    : 'text-amber-400 font-bold'
                 }`}
                 style={{
                   transformStyle: 'preserve-3d',
@@ -256,7 +256,7 @@ export default function SectionHero({ title }: SectionHeroProps) {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-amber-400"
+        className="absolute bottom-9 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-amber-400"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.5, duration: 0.8 }}
