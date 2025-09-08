@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function OurServices() {
   const services = [
@@ -122,37 +121,18 @@ export default function OurServices() {
     },
   }
 
-  const imageVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-      y: 40,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        type: 'spring' as const,
-        stiffness: 80,
-        damping: 15,
-        duration: 1,
-      },
-    },
-  }
-
-  const floatingVariants = {
-    animate: {
-      y: [-8, 8, -8],
-      rotate: [0, 3, 0],
-      transition: {
-        duration: 5,
-        repeat: Infinity,
-        repeatType: 'reverse',
-        ease: 'easeInOut',
-      },
-    },
-  }
+  // const floatingVariants = {
+  //   animate: {
+  //     y: [-8, 8, -8],
+  //     rotate: [0, 3, 0],
+  //     transition: {
+  //       duration: 5,
+  //       repeat: Infinity,
+  //       repeatType: 'reverse',
+  //       ease: 'easeInOut' as const,
+  //     },
+  //   },
+  // }
 
   const orbitVariants = {
     animate: {
@@ -160,52 +140,7 @@ export default function OurServices() {
       transition: {
         duration: 20,
         repeat: Infinity,
-        ease: 'linear',
-      },
-    },
-  }
-
-  const serviceContentVariants = {
-    hidden: {
-      opacity: 0,
-      x: -30,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: 'spring' as const,
-        stiffness: 100,
-        damping: 15,
-        duration: 0.6,
-      },
-    },
-  }
-
-  const serviceNavVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  }
-
-  const serviceButtonVariants = {
-    hidden: {
-      opacity: 0,
-      x: 30,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: 'spring' as const,
-        stiffness: 120,
-        damping: 15,
-        duration: 0.5,
+        ease: 'linear' as const,
       },
     },
   }
@@ -239,7 +174,7 @@ export default function OurServices() {
 
       <motion.div
         className="absolute bottom-16 left-4 sm:bottom-20 sm:left-8 lg:bottom-24 lg:left-12 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-amber-400/8 to-amber-400/3 rotate-45 rounded-xl border border-amber-400/15 backdrop-blur-sm"
-        variants={floatingVariants}
+        variants={orbitVariants}
         animate="animate"
         style={{ animationDelay: '1.5s' }}
       />
@@ -461,7 +396,6 @@ export default function OurServices() {
                       alt={services[selectedService].title}
                       fill
                       className="object-cover"
-                      onLoad={() => setIsImageLoading(false)}
                     />
 
                     {/* Gradient Overlay */}

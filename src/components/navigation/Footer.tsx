@@ -2,7 +2,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  Clock,
   Facebook,
   Instagram,
   Linkedin,
@@ -11,7 +10,6 @@ import {
   Award,
   Users,
   Building,
-  Calendar,
 } from 'lucide-react'
 
 export default function Footer() {
@@ -192,9 +190,9 @@ export default function Footer() {
                   <p className="text-slate-400 text-sm leading-relaxed">
                     123 Architecture Avenue
                     <br />
-                    Design City, DC 12345
+                    Design City, Nairobi
                     <br />
-                    United States
+                    Kenya
                   </p>
                 </div>
               </div>
@@ -229,27 +227,11 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Hours */}
-              <div className="flex items-start space-x-3">
-                <div className="flex items-center justify-center w-8 h-8 bg-slate-800 rounded-lg mt-0.5">
-                  <Clock size={16} className="text-amber-400" />
-                </div>
-                <div>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Monday - Friday: 9:00 - 18:00
-                    <br />
-                    Saturday: 10:00 - 16:00
-                    <br />
-                    Sunday: Closed
-                  </p>
-                </div>
-              </div>
-
               {/* CTA Button */}
               <div className="pt-4">
                 <a href="/consultation">
                   <button className="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 py-3 px-6 font-semibold rounded-lg transition-colors duration-300 uppercase tracking-wide text-sm">
-                    Schedule Consultation
+                    Contact Us
                   </button>
                 </a>
               </div>
@@ -263,17 +245,17 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Award size={20} className="text-amber-400" />
               <span className="text-slate-400 text-sm">
-                Certified by AIA • LEED Accredited • Award-winning Design
+                Certified by AQSB • Award-winning Design
               </span>
             </div>
             <div className="flex items-center space-x-6 text-slate-400 text-sm">
               <div className="flex items-center space-x-2">
                 <Users size={16} className="text-amber-400" />
-                <span>50+ Team Members</span>
+                <span>2+ Team Members</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Building size={16} className="text-amber-400" />
-                <span>3 Office Locations</span>
+                <span>1 Office Locations</span>
               </div>
             </div>
           </div>
@@ -282,7 +264,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between text-sm text-slate-400">
           <div className="mb-4 md:mb-0">
-            <p>&copy; {currentYear} ArchiStudio. All rights reserved.</p>
+            <p>&copy; {currentYear} Walter. All rights reserved.</p>
           </div>
           <div className="flex items-center space-x-6">
             <a href="#" className="hover:text-amber-400 transition-colors">

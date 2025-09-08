@@ -22,7 +22,7 @@ export default function FeatureCard({ icon: Icon, title, description, index }: F
       y: 0,
       scale: 1,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 80,
         damping: 15,
         duration: 0.6,
@@ -36,7 +36,7 @@ export default function FeatureCard({ icon: Icon, title, description, index }: F
       scale: 1.1,
       rotate: 5,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 300,
         damping: 10,
       },

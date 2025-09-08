@@ -53,18 +53,18 @@ export default function HeroSection() {
     },
   }
 
-  const floatingVariants = {
-    animate: {
-      y: [-8, 8, -8],
-      rotate: [0, 3, 0],
-      transition: {
-        duration: 5,
-        repeat: Infinity,
-        repeatType: 'reverse',
-        ease: 'easeInOut',
-      },
-    },
-  }
+  // const floatingVariants = {
+  //   animate: {
+  //     y: [-8, 8, -8],
+  //     rotate: [0, 3, 0],
+  //     transition: {
+  //       duration: 5,
+  //       repeat: Infinity,
+  //       repeatType: 'reverse',
+  //       ease: 'easeInOut' as const,
+  //     },
+  //   },
+  // }
 
   const orbitVariants = {
     animate: {
@@ -72,7 +72,7 @@ export default function HeroSection() {
       transition: {
         duration: 20,
         repeat: Infinity,
-        ease: 'linear',
+        ease: 'linear' as const,
       },
     },
   }
@@ -83,7 +83,7 @@ export default function HeroSection() {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { duration: 2, ease: 'easeInOut' },
+        pathLength: { duration: 2, ease: 'easeInOut' as const },
         opacity: { duration: 0.5 },
       },
     },
@@ -185,7 +185,7 @@ export default function HeroSection() {
 
       <motion.div
         className="absolute bottom-16 left-4 sm:bottom-20 sm:left-8 lg:bottom-24 lg:left-12 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-amber-400/8 to-amber-400/3 rotate-45 rounded-xl border border-amber-400/15 backdrop-blur-sm"
-        variants={floatingVariants}
+        variants={orbitVariants}
         animate="animate"
         style={{ animationDelay: '1.5s' }}
       />

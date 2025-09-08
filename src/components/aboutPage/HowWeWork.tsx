@@ -62,27 +62,13 @@ export default function HowWeWorkSection() {
     },
   }
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 60 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 20,
-        duration: 0.8,
-      },
-    },
-  }
-
   const fadeInLeft = {
     hidden: { opacity: 0, x: -80 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 80,
         damping: 15,
         duration: 1,
@@ -96,20 +82,11 @@ export default function HowWeWorkSection() {
       opacity: 1,
       x: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 80,
         damping: 15,
         duration: 1,
       },
-    },
-  }
-
-  const cardHover = {
-    hover: {
-      y: -8,
-      scale: 1.02,
-      boxShadow: '0 25px 50px rgba(245, 158, 11, 0.15)',
-      transition: { duration: 0.3 },
     },
   }
 

@@ -86,26 +86,18 @@ const projects = [
   },
 ]
 
-const categories = ['All', 'Residential', 'Commercial', 'Hospitality', 'Cultural']
-
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState('All')
   const [expandedProject, setExpandedProject] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  const heroRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start'],
   })
 
-  const isInView = useInView(heroRef, { once: true, margin: '-10%' })
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
 
-  const filteredProjects =
-    selectedCategory === 'All'
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory)
+  const filteredProjects = projects
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -115,15 +107,6 @@ export default function Projects() {
         staggerChildren: 0.15,
         delayChildren: 0.3,
       },
-    },
-  }
-
-  const heroVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
     },
   }
 
@@ -173,6 +156,7 @@ function ProjectCard({
   isExpanded,
   onToggleExpand,
 }: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   project: any
   index: number
   isExpanded: boolean
@@ -192,7 +176,7 @@ function ProjectCard({
       y: 0,
       scale: 1,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 80,
         damping: 20,
         duration: 0.8,

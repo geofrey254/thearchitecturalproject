@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react'
+import { Menu, X, Phone, Mail } from 'lucide-react'
 import Link from 'next/link'
 
 export default function MinimalistInteriorNavbar() {
@@ -177,7 +177,7 @@ export default function MinimalistInteriorNavbar() {
                   className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  Services
+                  SERVICES
                 </a>
 
                 <a
@@ -185,7 +185,7 @@ export default function MinimalistInteriorNavbar() {
                   className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  Porfolio
+                  PORTFOLIO
                 </a>
 
                 <a
@@ -214,8 +214,8 @@ export default function MinimalistInteriorNavbar() {
                   className="flex items-center space-x-3 p-4 border border-white/20 rounded-none hover:border-amber-400/50 transition-colors"
                 >
                   <Mail size={16} className="text-amber-400" />
-                  <span className="text-white/90 font-light tracking-wider">
-                    HELLO@LUXEINTERIORS.COM
+                  <span className="text-white/90 font-light tracking-wide uppercase">
+                    walter@gmail.com
                   </span>
                 </a>
               </div>
