@@ -35,7 +35,7 @@ export default function MinimalistInteriorNavbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20 lg:h-24">
-            {/* Logo - Ultra Minimal */}
+            {/* Logo */}
             <div className="flex items-center">
               <div className="group cursor-pointer">
                 <div className="flex items-center space-x-3">
@@ -52,9 +52,7 @@ export default function MinimalistInteriorNavbar() {
                   </div>
                   <div>
                     <h1
-                      className={`text-lg lg:text-xl font-light tracking-[0.2em] transition-colors duration-300 ${
-                        isScrolled ? 'text-white' : 'text-white'
-                      }`}
+                      className={`text-lg lg:text-xl font-light tracking-[0.2em] transition-colors duration-300 text-white`}
                     >
                       WALTER
                     </h1>
@@ -63,64 +61,35 @@ export default function MinimalistInteriorNavbar() {
               </div>
             </div>
 
-            {/* Desktop Navigation - Ultra Clean */}
+            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center">
               <div className="flex items-center space-x-12">
-                <Link
-                  href="/"
-                  className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
-                    isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  HOME
-                  <div className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-500"></div>
-                </Link>
-
-                <a
-                  href="/services"
-                  className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
-                    isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  SERVICES
-                  <div className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-500"></div>
-                </a>
-
-                <a
-                  href="/portfolio"
-                  className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
-                    isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  PORTFOLIO
-                  <div className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-500"></div>
-                </a>
-
-                <a
-                  href="/about-us"
-                  className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
-                    isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  ABOUT
-                  <div className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-500"></div>
-                </a>
-
-                <a
-                  href="/contact-us"
-                  className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
-                    isScrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  CONTACT
-                  <div className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-500"></div>
-                </a>
+                {[
+                  { name: 'HOME', href: '/' },
+                  { name: 'ABOUT', href: '/about-us' },
+                  { name: 'SERVICES', href: '/services' },
+                  { name: 'PORTFOLIO', href: '/portfolio' },
+                  { name: 'CONTACT', href: '/contact-us' },
+                ].map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`relative text-sm font-light tracking-wider transition-all duration-300 group ${
+                      isScrolled
+                        ? 'text-white/90 hover:text-white'
+                        : 'text-white/80 hover:text-white'
+                    }`}
+                  >
+                    {link.name}
+                    <div className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-500"></div>
+                  </Link>
+                ))}
               </div>
             </div>
 
-            {/* Right Section - Minimal Contact */}
+            {/* Right Section - Contact */}
             <div className="hidden lg:flex items-center">
-              <a
+              <Link
                 href="tel:+1234567890"
                 className={`flex items-center space-x-3 px-4 py-2 border rounded-full transition-all duration-300 group ${
                   isScrolled
@@ -130,15 +99,13 @@ export default function MinimalistInteriorNavbar() {
               >
                 <Phone size={14} className="text-amber-400" />
                 <span className="text-white/90 text-sm font-light tracking-wider">CALL US</span>
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className={`lg:hidden p-2 rounded-full transition-all duration-300 ${
-                isScrolled ? 'text-white hover:bg-white/10' : 'text-white hover:bg-white/10'
-              }`}
+              className={`lg:hidden p-2 rounded-full transition-all duration-300 text-white hover:bg-white/10`}
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -146,70 +113,46 @@ export default function MinimalistInteriorNavbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-xl">
           <div className="flex flex-col h-full">
-            {/* Spacer for navbar */}
             <div className="h-20"></div>
 
             {/* Menu Items */}
             <div className="flex-1 px-6 py-8">
               <div className="space-y-8">
-                <Link
-                  href="/"
-                  className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  HOME
-                </Link>
-
-                <a
-                  href="/about-us"
-                  className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  ABOUT
-                </a>
-
-                <a
-                  href="/services"
-                  className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  SERVICES
-                </a>
-
-                <a
-                  href="/portfolio"
-                  className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  PORTFOLIO
-                </a>
-
-                <a
-                  href="/contact-us"
-                  className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  CONTACT
-                </a>
+                {[
+                  { name: 'HOME', href: '/' },
+                  { name: 'ABOUT', href: '/about-us' },
+                  { name: 'SERVICES', href: '/services' },
+                  { name: 'PORTFOLIO', href: '/portfolio' },
+                  { name: 'CONTACT', href: '/contact-us' },
+                ].map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="block text-2xl font-light text-white/90 hover:text-white tracking-wider transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             </div>
 
-            {/* Mobile Contact Section */}
+            {/* Mobile Contact */}
             <div className="px-6 py-8 border-t border-white/10">
               <div className="space-y-4">
-                <a
+                <Link
                   href="tel:+1234567890"
                   className="flex items-center space-x-3 p-4 border border-white/20 rounded-none hover:border-amber-400/50 transition-colors"
                 >
                   <Phone size={16} className="text-amber-400" />
                   <span className="text-white/90 font-light tracking-wider">+1 (234) 567-890</span>
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="mailto:hello@luxeinteriors.com"
                   className="flex items-center space-x-3 p-4 border border-white/20 rounded-none hover:border-amber-400/50 transition-colors"
                 >
@@ -217,7 +160,7 @@ export default function MinimalistInteriorNavbar() {
                   <span className="text-white/90 font-light tracking-wide uppercase">
                     walter@gmail.com
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

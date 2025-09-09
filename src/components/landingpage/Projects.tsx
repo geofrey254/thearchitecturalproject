@@ -158,7 +158,7 @@ export default function Projects() {
       >
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left: Badge */}
-          <div className="lg:col-span-3 flex justify-center lg:justify-start lg:sticky lg:top-8">
+          <div className="lg:col-span-3 flex justify-start lg:sticky lg:top-8">
             <motion.div className="group relative" variants={badgeVariants}>
               {/* Glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>

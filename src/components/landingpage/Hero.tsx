@@ -105,7 +105,7 @@ export default function ModernInteriorHero() {
   const currentSlideData = slides[currentSlide]
 
   return (
-    <section className="relative h-[90vh] md:min-h-screen overflow-hidden bg-black mt-20">
+    <section className="relative h-[90vh] md:h-[110vh] xl:h-[130vh] 2xl:h-[80vh] overflow-hidden bg-black mt-20">
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
@@ -139,7 +139,7 @@ export default function ModernInteriorHero() {
 
       {/* Main Content - Improved Grid Layout */}
       <div className="absolute inset-0 z-10">
-        <div className="h-[75vh] md:h-full flex flex-col lg:grid lg:grid-cols-12 lg:grid-rows-12 gap-4 lg:gap-12 p-6 sm:p-8 lg:py-20 lg:px-12 2xl:py-20 2xl:px-12">
+        <div className="h-[75vh] md:h-full flex flex-col lg:grid lg:grid-cols-12 lg:grid-rows-12 gap-4 lg:gap-12 xl:gap-14 p-6 sm:p-8 lg:py-20 xl:py-24 lg:px-12 2xl:py-20 2xl:px-12">
           {/* Category & Year Badge - Top Left */}
           <div className="lg:col-span-3 lg:row-span-1 flex items-start justify-start">
             <div
@@ -164,7 +164,7 @@ export default function ModernInteriorHero() {
               {/* Main Title */}
               <div className="overflow-hidden">
                 <h1
-                  className={`text-6xl lg:text-8xl xl:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-100 to-amber-300 leading-none tracking-tight transform transition-all duration-1200 ease-out ${
+                  className={`text-6xl lg:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-100 to-amber-300 leading-none tracking-tight transform transition-all duration-1200 ease-out ${
                     isLoaded ? 'translate-y-0' : 'translate-y-full'
                   }`}
                   style={{

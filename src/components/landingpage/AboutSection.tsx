@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function AboutSection() {
   return (
-    <section className="bg-gray-50 py-24 px-8 relative overflow-hidden ">
+    <section className="bg-gray-50 py-12 md:py-24 px-8 relative overflow-hidden ">
       {/* Architectural Grid Pattern Background */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -31,7 +31,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left: Badge */}
-          <div className="lg:col-span-3 flex justify-center lg:justify-start lg:sticky lg:top-8">
+          <div className="lg:col-span-3 flex justify-start lg:sticky lg:top-8">
             <div className="group relative">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
@@ -71,7 +71,7 @@ export default function AboutSection() {
 
           {/* Right: Title and Description */}
           <div className="lg:col-span-9">
-            <div className="mb-20">
+            <div>
               <motion.h2
                 variants={{
                   hidden: { opacity: 0, x: 20 },

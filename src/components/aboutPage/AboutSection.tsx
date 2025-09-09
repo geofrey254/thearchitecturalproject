@@ -130,7 +130,7 @@ export default function AboutSection() {
             </motion.div>
 
             <motion.h2
-              className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-black text-white/70 leading-[0.9] tracking-[-0.02em] font-sans text-center lg:text-left"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white/70 leading-[0.9] tracking-[-0.02em] font-sans text-center lg:text-left"
               variants={slideInFromRightVariants}
             >
               Designing{' '}

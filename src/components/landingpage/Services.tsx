@@ -245,7 +245,7 @@ export default function ServicesSection() {
   }
 
   return (
-    <section className="bg-white pt-24 px-4 relative overflow-hidden">
+    <section className="bg-white pt-24 px-8 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-3">
         <div
@@ -293,7 +293,7 @@ export default function ServicesSection() {
         {/* Header Section */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-20">
           {/* Left: Badge */}
-          <div className="lg:col-span-3 flex justify-center lg:justify-start">
+          <div className="lg:col-span-3 flex justify-start">
             <motion.div className="group relative" variants={badgeVariants}>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
 

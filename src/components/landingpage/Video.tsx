@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function Video() {
   return (
-    <section className="relative md:border-t border-amber-400">
+    <section className="relative md:border-t border-amber-400 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t bg-scroll  from-black to-black/40 z-10"></div>
       <video
         preload="none"
@@ -10,7 +10,7 @@ export function Video() {
         playsInline
         muted
         loop
-        className="w-full h-[70vh] md:h-auto object-cover"
+        className="w-full h-[70vh] md:h-auto 2xl:h-[80vh] object-cover"
       >
         <source src="/house.mp4" type="video/mp4" />
 

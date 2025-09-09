@@ -145,7 +145,7 @@ export default function HowWeWorkSection() {
         {/* Header Section - Side by Side Layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
           {/* Left Side - Text Content */}
-          <motion.div variants={fadeInLeft} className="space-y-8">
+          <motion.div variants={fadeInLeft} className="space-y-8 text-center md:text-left">
             <motion.div className="inline-flex items-center gap-3">
               <Sparkles className="w-5 h-5 text-amber-500" />
               <span className="px-4 py-2 bg-gradient-to-r from-amber-400/15 to-amber-300/10 text-amber-700 text-sm font-semibold tracking-wider uppercase rounded-full border border-amber-400/25 backdrop-blur-sm">
@@ -153,7 +153,7 @@ export default function HowWeWorkSection() {
               </span>
             </motion.div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900/70 leading-[0.9] tracking-[-0.02em]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900/70 leading-[0.9] tracking-[-0.02em]">
               Crafting Your{' '}
               <span className="relative inline-block text-amber-600">
                 Vision
@@ -173,7 +173,7 @@ export default function HowWeWorkSection() {
             </p>
 
             <motion.div
-              className="flex items-center gap-4 pt-4"
+              className="flex items-center gap-4 pt-4 justify-center md:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}
