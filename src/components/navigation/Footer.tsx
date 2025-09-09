@@ -63,13 +63,19 @@ export default function Footer() {
               Subscribe to our newsletter for the latest architectural trends, project showcases,
               and industry insights.
             </p>
-            <div className="flex max-w-md mx-auto">
+            <div className="flex max-w-md w-full mx-auto overflow-hidden">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 bg-slate-800 border border-slate-700 focus:border-amber-400 focus:outline-none text-white placeholder-slate-400 rounded-l-lg"
+                className="flex-1 px-3 md:px-6 py-4 bg-slate-800 border border-slate-700 
+               focus:border-amber-400 focus:outline-none text-white placeholder-slate-400 
+               rounded-l-lg min-w-0"
               />
-              <button className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold rounded-r-lg transition-colors duration-300 flex items-center">
+              <button
+                className="shrink-0 px-4 md:px-8 py-4 bg-amber-500 hover:bg-amber-400 
+                     text-slate-900 font-semibold rounded-r-lg transition-colors 
+                     duration-300 flex items-center"
+              >
                 Subscribe
                 <ArrowRight size={18} className="ml-2" />
               </button>
