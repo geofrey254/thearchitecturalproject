@@ -32,7 +32,7 @@ export default function ContactForm() {
               </h3>
               <div className="space-y-1">
                 <p className="text-lg font-semibold">+254 701 010101</p>
-                <p className="text-3xl font-bold text-amber-500">walter@gmail.com</p>
+                <p className="text-3xl font-bold text-amber-500">Ngune Craft@gmail.com</p>
               </div>
             </div>
           </div>

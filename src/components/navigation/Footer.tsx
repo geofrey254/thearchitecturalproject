@@ -99,10 +99,10 @@ export default function Footer() {
                   </div>
                   <div>
                     <h1
-                      className="text-lg lg:text-xl font-light tracking-[0.2em] transition-colors duration-300 text-white
+                      className="text-lg uppercase lg:text-xl font-light tracking-[0.2em] transition-colors duration-300 text-white
                       "
                     >
-                      WALTER
+                      Ngune Craft
                     </h1>
                   </div>
                 </div>
@@ -213,7 +213,7 @@ export default function Footer() {
                     href="tel:+15551234567"
                     className="text-slate-400 hover:text-amber-400 transition-colors"
                   >
-                    +1 (555) 123-4567
+                    +254 (720) 123-4567
                   </a>
                 </div>
               </div>
@@ -228,7 +228,7 @@ export default function Footer() {
                     href="mailto:hello@archi.studio"
                     className="text-slate-400 hover:text-amber-400 transition-colors"
                   >
-                    hello@archi.studio
+                    hello@ngune.studio
                   </a>
                 </div>
               </div>
@@ -251,7 +251,7 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Award size={20} className="text-amber-400" />
               <span className="text-slate-400 text-sm">
-                Certified by AQSB • Award-winning Design
+                Certified by IDAK • Award-winning Design
               </span>
             </div>
             <div className="flex items-center space-x-6 text-slate-400 text-sm">
@@ -270,7 +270,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between text-sm text-slate-400">
           <div className="mb-4 md:mb-0">
-            <p>&copy; {currentYear} Walter. All rights reserved.</p>
+            <p>&copy; {currentYear} Ngune Craft. All rights reserved.</p>
           </div>
           <div className="flex items-center space-x-6">
             <a href="#" className="hover:text-amber-400 transition-colors">

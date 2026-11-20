@@ -52,9 +52,9 @@ export default function MinimalistInteriorNavbar() {
                   </div>
                   <div>
                     <h1
-                      className={`text-lg lg:text-xl font-light tracking-[0.2em] transition-colors duration-300 text-white`}
+                      className={`text-lg lg:text-xl uppercase font-light tracking-[0.2em] transition-colors duration-300 text-white`}
                     >
-                      WALTER
+                      Ngune Craft
                     </h1>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export default function MinimalistInteriorNavbar() {
                 >
                   <Mail size={16} className="text-amber-400" />
                   <span className="text-white/90 font-light tracking-wide uppercase">
-                    walter@gmail.com
+                    Ngune Craft@gmail.com
                   </span>
                 </Link>
               </div>

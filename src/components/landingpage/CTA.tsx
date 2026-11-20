@@ -79,7 +79,9 @@ export default function CTA() {
         </div>
       </div>
       <div className="absolute -bottom-2 md:-bottom-12 right-2 md:right-8 z-10 opacity-30 select-none pointer-events-none">
-        <h3 className="text-white text-[6rem] md:text-[12rem] font-extrabold">walter</h3>
+        <h3 className="text-white text-[6rem] md:text-[10rem] font-extrabold uppercase">
+          Ngune Craft
+        </h3>
       </div>
     </section>
   )

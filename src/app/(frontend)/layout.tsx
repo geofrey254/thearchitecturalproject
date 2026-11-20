@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
-  title: 'Walter Architect',
+  title: 'Ngune Craft Architect',
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
